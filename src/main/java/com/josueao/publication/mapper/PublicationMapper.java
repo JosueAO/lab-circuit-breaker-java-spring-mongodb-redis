@@ -1,5 +1,6 @@
 package com.josueao.publication.mapper;
 
+import com.josueao.publication.controller.request.PublicationRequest;
 import com.josueao.publication.domain.Publication;
 import com.josueao.publication.repository.entity.PublicationEntity;
 import org.mapstruct.Mapper;
@@ -10,4 +11,6 @@ public interface PublicationMapper {
     PublicationEntity toPublicationEntity(Publication publication);
 
     Publication toPublication(PublicationEntity publicationEntity);
+
+    Publication toPublication(PublicationRequest publicationRequest);
 }
