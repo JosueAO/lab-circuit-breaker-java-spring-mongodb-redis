@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/publication")
+@RequestMapping("/api/v1/publications")
 public class PublicationController {
 
     @Autowired
@@ -35,6 +35,7 @@ public class PublicationController {
     }
 
     @GetMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
     public Publication findById(@PathVariable("id") String id) {
         return publicationService.findById(id);
     }
